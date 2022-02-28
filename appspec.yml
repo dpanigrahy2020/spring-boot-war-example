@@ -1,5 +1,5 @@
 version: 0.0
 os: linux
 files:
-  - source: ./maigolab_hello-1.0.0.*
-    destination: /tmp
+  - source: ./hello-world-0.0.1-SNAPSHOT.war
+    destination: /home/ec2-user/tomcat/webapps
