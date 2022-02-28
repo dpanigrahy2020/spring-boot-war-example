@@ -3,3 +3,4 @@ os: linux
 files:
   - source: target/hello-world-0.0.1-SNAPSHOT.war
     destination: /home/ec2-user/tomcat/webapps
+name: helloworld-$(date +%Y-%m-%d)
