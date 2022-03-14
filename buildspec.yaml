@@ -1,0 +1,44 @@
+version: 0.2
+env:
+  secrets-manager:
+    LOGIN: sonarec2test:sonartoken
+    HOST: sonarec2test:HOST
+    Organization: sonarec2test:Organization
+    Project: sonarec2test:Project
+  variables:
+   # ENVIRONMENT: dev
+    TF_IN_AUTOMATION: 1
+    TERRAFORM_VERSION: 1.1.6
+    TERRATEST_VERSION: v0.40.4
+    BASE_PATH: terraform/modules
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  
+  pre_build:
+    commands:
+      - echo Starting pre-build...
+      - ./${BASE_PATH}/prebuild.sh  
+      - apt-get update
+      - apt-get install -y jq
+      - wget http://www-eu.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+      - tar xzf apache-maven-3.5.4-bin.tar.gz
+      - ln -s apache-maven-3.5.4 maven
+      - export PATH=$PATH:maven/bin/
+     
+  build:
+    commands:
+      - mvn clean
+      - mvn package
+   ###   - mvn sonar:sonar   -Dsonar.projectKey=dpanigrahy   -Dsonar.host.url=http://20.121.18.175:9000   -Dsonar.login=f4a6c44dcafdebd515413f4ef4bd7b748ceb4c98
+  post_build:
+    commands:
+      - echo Build Performed completed on `date`
+          
+artifacts:
+  files:
+    - '**/*'
+  name: myname-$(date +%Y-%m-%d) 
+  dscard-paths: yes
