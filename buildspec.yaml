@@ -33,7 +33,7 @@ phases:
    ###   - mvn sonar:sonar   -Dsonar.projectKey=dpanigrahy   -Dsonar.host.url=http://20.121.18.175:9000   -Dsonar.login=f4a6c44dcafdebd515413f4ef4bd7b748ceb4c98
   post_build:
     commands:
-      - echo Build Performed completed on `date`
+      - echo Build  Performed completed on `date`
           
 artifacts:
   files:
