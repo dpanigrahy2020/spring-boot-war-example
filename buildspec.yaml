@@ -8,7 +8,7 @@ env:
   variables:
    # ENVIRONMENT: dev
     TF_IN_AUTOMATION: 1
-    TERRAFORM_VERSION: 1.1.6
+    TERRAFORM_VERSION: 1.3.9
     TERRATEST_VERSION: v0.40.4
     BASE_PATH: terraform/modules
 
