@@ -1,10 +1,10 @@
 version: 0.2
 env:
-  secrets-manager:
-    LOGIN: sonarec2test:sonartoken
-    HOST: sonarec2test:HOST
-    Organization: sonarec2test:Organization
-    Project: sonarec2test:Project
+  #secrets-manager:
+  #  LOGIN: sonarec2test:sonartoken
+  #  HOST: sonarec2test:HOST
+  #  Organization: sonarec2test:Organization
+  #  Project: sonarec2test:Project
   variables:
    # ENVIRONMENT: dev
     TF_IN_AUTOMATION: 1
