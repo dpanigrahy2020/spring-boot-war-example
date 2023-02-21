@@ -23,7 +23,7 @@ public class HelloWorldApplication extends SpringBootServletInitializer {
 
     @RequestMapping("/")
     String helloWorld() {
-        return "Welcome to CICD using AWS Pipeline";
+        return "Hi Team... Welcome to single page web application.";
     }
 
 }
