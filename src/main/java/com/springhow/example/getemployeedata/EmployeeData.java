@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication
-public class GetEmployeeData extends SpringBootServletInitializer {
+public class EmployeeData extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(GetEmployeeData.class);
+        return application.sources(EmployeeData.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(GetEmployeeData.class);
+        SpringApplication.run(EmployeeData.class);
     }
 
     @RequestMapping("/")
