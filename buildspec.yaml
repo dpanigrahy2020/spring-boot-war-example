@@ -39,4 +39,4 @@ artifacts:
   files:
     - '**/*'
   name: myname-$(date +%Y-%m-%d) 
-###  dscard-paths: yes
+###  dscard-paths: yes 
