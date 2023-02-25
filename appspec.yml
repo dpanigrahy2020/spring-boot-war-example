@@ -3,4 +3,10 @@ os: linux
 files:
   - source: target/employee-data-0.0.1-SNAPSHOT.jar
     destination: /home/ec2-user/tomcat/webapps
+hooks:
+  BeforeInstall:
+    - location: /home/ec2-user/removeApplication.sh
+  AfterInstall: 
+    - location: /home/ec2-user/runApplication.sh
+      timeout: 180
 name: employeeData-$(date +%Y-%m-%d)
