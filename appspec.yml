@@ -9,4 +9,4 @@ hooks:
   AfterInstall: 
     - location: runApplication.sh
       timeout: 180
-name: employeeData-$(date +%Y-%m-%d)
+#name: employeeData-$(date +%Y-%m-%d)
