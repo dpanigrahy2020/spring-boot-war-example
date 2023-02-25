@@ -5,8 +5,8 @@ files:
     destination: /home/ec2-user/tomcat/webapps
 hooks:
   BeforeInstall:
-    - location: /home/ec2-user/removeApplication.sh
+    - location: removeApplication.sh
   AfterInstall: 
-    - location: /home/ec2-user/runApplication.sh
+    - location: runApplication.sh
       timeout: 180
 name: employeeData-$(date +%Y-%m-%d)
