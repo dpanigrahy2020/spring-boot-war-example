@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: target/employee-data-0.0.1-SNAPSHOT.jar
-    destination: /home/ec2-user/employee-data-$(date +%Y-%m-%d).jar
+    destination: /home/ec2-user
 hooks:
   AfterInstall: 
     - location: runApplication.sh
